@@ -8,3 +8,7 @@
   ➜  Local:   http://localhost:8080/
   ➜  Network: http://192.168.0.2:8080/
 10:53:57 AM [vite] (client) hmr update /src/index.css, /src/components/CTASection.tsx
+11:03:26 AM [vite] (client) hmr update /src/index.css, /src/components/Navbar.tsx
+11:03:32 AM [vite] (client) hmr update /src/index.css, /src/components/Navbar.tsx
+11:08:15 AM [vite] (client) hmr update /src/index.css, /src/components/Navbar.tsx
+11:08:28 AM [vite] (client) hmr update /src/index.css, /src/components/Navbar.tsx
