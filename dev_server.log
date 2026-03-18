@@ -1,0 +1,10 @@
+
+> vite_react_shadcn_ts@0.0.0 dev
+> vite
+
+
+  VITE v8.0.0  ready in 436 ms
+
+  ➜  Local:   http://localhost:8080/
+  ➜  Network: http://192.168.0.2:8080/
+10:53:57 AM [vite] (client) hmr update /src/index.css, /src/components/CTASection.tsx

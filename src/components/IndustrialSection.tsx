@@ -1,4 +1,5 @@
 import industrialImg from "@/assets/industrial-automation.jpg";
+import { Link } from "react-router-dom";
 import { Factory, BookOpen, Receipt, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -47,8 +48,10 @@ const IndustrialSection = () => {
                 </div>
               ))}
             </div>
-            <Button variant="hero" className="gap-2 mt-2">
-              Explore Solutions <ArrowRight size={16} />
+            <Button asChild variant="hero" className="gap-2 mt-2">
+              <Link to="/industrial-solutions">
+                Explore Solutions <ArrowRight size={16} />
+              </Link>
             </Button>
           </div>
           <div>

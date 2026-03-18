@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -12,9 +13,9 @@ const Footer = () => {
             </span>
           </div>
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms</a>
-            <a href="#" className="hover:text-foreground transition-colors">Contact</a>
+            <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
+            <Link to="/terms" className="hover:text-foreground transition-colors">Terms</Link>
+            <a href="mailto:nathan@rush-automations.com" className="hover:text-foreground transition-colors">Contact</a>
           </div>
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Rush Automations. All rights reserved.

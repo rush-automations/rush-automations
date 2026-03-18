@@ -15,8 +15,8 @@ const CTASection = () => {
           <Button variant="hero" size="lg" className="gap-2">
             Book a Demo <ArrowRight size={16} />
           </Button>
-          <Button variant="heroOutline" size="lg" className="border-primary/50 text-primary-foreground hover:bg-primary hover:text-primary-foreground">
-            Contact Sales
+          <Button asChild variant="heroOutline" size="lg" className="border-primary/50 text-primary-foreground hover:bg-primary hover:text-primary-foreground">
+            <a href="mailto:nathan@rush-automations.com">Contact Sales</a>
           </Button>
         </div>
       </div>
