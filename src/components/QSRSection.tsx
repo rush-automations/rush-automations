@@ -1,4 +1,5 @@
 import qsrKitchen from "@/assets/qsr-kitchen.jpg";
+import { Link } from "react-router-dom";
 import { UtensilsCrossed, BarChart3, Eye, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -51,8 +52,10 @@ const QSRSection = () => {
                 </div>
               ))}
             </div>
-            <Button variant="hero" className="gap-2 mt-2">
-              Explore QSR Solutions <ArrowRight size={16} />
+            <Button asChild variant="hero" className="gap-2 mt-2">
+              <Link to="/qsr-solutions">
+                Explore QSR Solutions <ArrowRight size={16} />
+              </Link>
             </Button>
           </div>
         </div>
