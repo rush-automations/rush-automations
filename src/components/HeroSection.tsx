@@ -1,60 +1,68 @@
-import heroDashboard from "@/assets/hero-dashboard.png";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap, BarChart3, Eye, Truck } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
-const bentoItems = [
-  { icon: Zap, label: "AI Automations", value: "50+ workflows", delay: "0ms" },
-  { icon: BarChart3, label: "Unified Dashboards", value: "Real-time data", delay: "50ms" },
-  { icon: Eye, label: "CCTV Analytics", value: "Labor insights", delay: "100ms" },
-  { icon: Truck, label: "Supply Chain", value: "End-to-end", delay: "150ms" },
+const apps = [
+  {
+    name: "Tribe",
+    description: "Agentic workplace communication",
+    url: "https://tribe-platform.netlify.app/",
+  },
+  {
+    name: "Drive Draw",
+    description: "Cloud enabled diagramming",
+    url: "https://draw.rush-automation.com/",
+  },
 ];
 
 const HeroSection = () => {
   return (
-    <section className="pt-28 pb-20 md:pt-36 md:pb-28">
-      <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1.5 rounded-md text-sm font-medium animate-fade-in">
-              <Zap size={14} />
-              AI-Powered Automation for Small Business
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-secondary tracking-tight leading-[1.1] animate-slide-up">
-              Automate operations.{" "}
-              <span className="text-primary">Accelerate growth.</span>
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-lg animate-slide-up" style={{ animationDelay: "80ms" }}>
-              From quick-service restaurants to manufacturing floors, Rush Automations connects your systems, analyzes your data, and eliminates manual work.
-            </p>
-            <div className="flex flex-wrap gap-3 animate-slide-up" style={{ animationDelay: "160ms" }}>
-              <Button variant="hero" size="lg" className="gap-2">
-                Book a Demo <ArrowRight size={16} />
-              </Button>
-              <Button variant="heroOutline" size="lg">
-                See How It Works
-              </Button>
-            </div>
-          </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Abstract background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-primary/20 rounded-full" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-secondary/10 rounded-full" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[32rem] h-[32rem] border border-primary/5 rounded-full" />
+      </div>
 
-          <div className="space-y-4">
-            <div className="grid grid-cols-2 gap-3">
-              {bentoItems.map((item) => (
-                <div
-                  key={item.label}
-                  className="bg-card border border-border rounded-md p-4 animate-slide-up hover:border-primary/30 transition-colors duration-150"
-                  style={{ animationDelay: item.delay }}
-                >
-                  <item.icon size={20} className="text-primary mb-2" />
-                  <p className="text-xs text-muted-foreground font-medium">{item.label}</p>
-                  <p className="text-sm font-display font-semibold text-foreground">{item.value}</p>
-                </div>
-              ))}
-            </div>
-            <div className="rounded-md overflow-hidden border border-border animate-fade-in shadow-lg" style={{ animationDelay: "200ms" }}>
-              <img src={heroDashboard} alt="Rush Automations unified dashboard" className="w-full h-auto" />
-            </div>
-          </div>
+      {/* Content */}
+      <div className="relative z-10 text-center space-y-12">
+        <div className="space-y-4">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-extrabold tracking-tighter">
+            <span className="text-foreground">Rush</span>
+            <span className="text-primary">.</span>
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground font-light tracking-wide">
+            Automations
+          </p>
         </div>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          {apps.map((app) => (
+            <a
+              key={app.name}
+              href={app.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 bg-card border border-border rounded-md px-6 py-4 hover:border-primary/50 transition-colors"
+            >
+              <div className="text-left">
+                <p className="font-display font-semibold text-foreground">{app.name}</p>
+                <p className="text-sm text-muted-foreground">{app.description}</p>
+              </div>
+              <ArrowUpRight size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Decorative grid */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, var(--border) 1px, transparent 0)`,
+          backgroundSize: '40px 40px',
+          opacity: 0.3
+        }} />
       </div>
     </section>
   );
