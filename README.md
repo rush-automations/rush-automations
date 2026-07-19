@@ -78,6 +78,33 @@ pnpm lint
 pnpm lint:fix
 ```
 
+## Environment Variables (Netlify)
+
+Go to Site settings > Environment variables in Netlify:
+
+| Variable | How to acquire | Required |
+|----------|---------------|----------|
+| `WORKOS_CLIENT_ID` | WorkOS Dashboard > Organizations > API Keys | Yes |
+| `WORKOS_API_KEY` | WorkOS Dashboard > Organizations > API Keys | Yes |
+| `STRIPE_PUBLIC_KEY` | Stripe Dashboard > Developers > API keys | Yes |
+| `STRIPE_SECRET_KEY` | Stripe Dashboard > Developers > API keys | Yes |
+| `NETLIFY_SITE_URL` | Netlify site settings / deploy URL | Yes |
+
+Setup:
+1. Create account at https://workos.com
+2. Create organization; copy Client ID and API Key
+3. Create Stripe account; copy publishable and secret keys
+4. Add all keys in Netlify site settings > Environment variables
+5. Redeploy site
+
+## Suite Integration
+
+This is the main identity and billing hub for the Rush workplace productivity suite. It links to:
+- Tribe Platform (messages/credits)
+- Drive Draw (Google-linked drawings, AI interaction at cost + 20%)
+
+Shared WorkOS auth: users in one app are users in all. Credits are user-level, priced at $10 per 1000.
+
 ## License
 
 MIT
